@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Google Search"  parallel="tests">
+
+	 <test name="Google Search Firefox">
+		<parameter name="Browser" value="firefox" ></parameter>
+		<parameter name="InputData" value="payjo"></parameter>
+		
+		<classes>
+		<class name="TestBase.GoogleSearch" />
+		</classes>
+	</test> 
+	
+	
+	 <test name="Google Search Chrome">
+		<parameter name="Browser" value="chrome" ></parameter>
+		<parameter name="InputData" value="payjo"></parameter>
+		
+		<classes>
+		<class name="TestBase.GoogleSearch" />
+		</classes>
+	</test>
+</suite>

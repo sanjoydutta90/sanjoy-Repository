@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Flipkart"  parallel="tests">
+
+	 <test name="Flipkart Firefox">
+		<parameter name="Browser" value="firefox" ></parameter>
+		<parameter name="URL" value="https://www.flipkart.com/" ></parameter>
+		<parameter name="UserName" value=""></parameter>
+		<parameter name="Password" value=""></parameter>
+		<parameter name="SearchItem" value="Iphone 7"></parameter>
+		
+		<classes>
+		<class name="TestBase.Flipkart" />
+		</classes>
+	</test> 
+	
+	
+	 <test name="Flipkart Chrome">
+		<parameter name="Browser" value="chrome" ></parameter>
+		<parameter name="URL" value="https://www.flipkart.com/" ></parameter>
+		<parameter name="UserName" value=""></parameter>
+		<parameter name="Password" value=""></parameter>
+		<parameter name="SearchItem" value="Iphone 7"></parameter>
+		
+		<classes>
+		<class name="TestBase.Flipkart" />
+		</classes>
+	</test>
+</suite>

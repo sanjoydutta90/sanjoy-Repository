@@ -1,8 +1,12 @@
 package WebDriverUtilities;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+import POM.FlipkartLoginPage;
 
 public class DriverSetup {
 	
@@ -45,5 +49,13 @@ public class DriverSetup {
 				driver=new ChromeDriver();
 		
 	}
+	
+	public void login(String Username,String Password)
+	{
+		FlipkartLoginPage obj=new FlipkartLoginPage(driver);
+		obj.loginFlipkart(Username, Password);
+	}
+	
+	
 
 }

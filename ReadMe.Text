@@ -1,15 +1,28 @@
-Assignment 1:
 
-We have to execute "googleSearch.Xml" file
 
-This script can run on both "MAC" and "windows" depending upon in which machine you are executing 
+The script can run on both "MAC" and "windows" depending upon in which machine you are executing 
 
 Please note: I am using browser driver for 32 bit windows system, if you are trying to execute in win 64 bit system then it might give you the error. You just have to change the driver to 64 bit in "Exe Files" folder.
 
+
+Assignment 1:
+
+We have to execute "googleSearch.Xml" file
 
 Test Execution Setup:
 
 1> Update the browser value and the search key in the "googleSearch.Xml" file
 2> Run "googleSearch.Xml" file as TEST NG
+
+
+Assignment 2:
+
+We have to execute "flipkart.xml" file 
+
+Test Execution Setup:
+
+1> Update the value of "UserName", "Password" and the "SearchItem" in the "flipkart.xml" file.
+
+2> Run "flipkart.xml" file as TEST NG
 
 

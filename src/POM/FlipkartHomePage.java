@@ -18,6 +18,9 @@ public class FlipkartHomePage {
 	By FirstItem=By.xpath("(//div[@class='_3T_wwx']//div[@class='_3wU53n'])[1]");
 	By AddtoCartButton=By.xpath("//button[@class='_2AkmmA _2Npkh4 _2MWPVK']");
 	By CartLink=By.xpath("//a[@class='_3NFO0d _2f5Jjv']");
+	By MyAccount=By.xpath("//div[@class='_20yN1P qt4LQw']//span");
+	By MyProfile=By.xpath("(//div[@class='_20yN1P qt4LQw']//a)[1]");
+	By LogOutButton=By.xpath("(//div[@class='_3NNJZh row']//span)[2]");
 	
 	
 	public FlipkartHomePage(WebDriver driver)
@@ -57,6 +60,16 @@ public class FlipkartHomePage {
 	{
 		wait.until(ExpectedConditions.presenceOfElementLocated(CartLink));
 		driver.findElement(CartLink).click();
+	}
+	
+	public void LogOut()
+	{
+		driver.findElement(MyAccount).click();
+		driver.findElement(MyProfile).click();
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(LogOutButton));
+		driver.findElement(LogOutButton).click();
+		
 	}
 	
 	public void SwitchToWindow()

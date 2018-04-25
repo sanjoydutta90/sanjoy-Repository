@@ -14,6 +14,8 @@ import WebDriverUtilities.DriverSetup;
 
 public class Flipkart extends DriverSetup{
 	
+	FlipkartHomePage obj;
+	
 	@BeforeTest
 	@Parameters({"Browser","URL","UserName","Password"})
 	public void setup(String Browser, String URL, String Username, String Password)
@@ -32,7 +34,7 @@ public class Flipkart extends DriverSetup{
 	@Parameters({"SearchItem"})
 	public void ValidateFlipkart(String Item)
 	{
-		FlipkartHomePage obj=new FlipkartHomePage(driver);
+		obj=new FlipkartHomePage(driver);
 		obj.SearchItem(Item);
 		
 		String Added_Item=obj.AddCart();
@@ -47,6 +49,7 @@ public class Flipkart extends DriverSetup{
 	@AfterTest
 	public void TearDown()
 	{
+		obj.LogOut();
 		driver.quit();
 	}
 }
